@@ -12,5 +12,14 @@
     <%= render 'layouts/messages' %>
     <%= yield %>
   </div>
+  
+<!--Display Parameters hash on each page-->
+<br>
+<h5><em>Params</em></h5>
+<ul>
+<% params.each do |key, val|%>
+<li><%= key %>: <%= val %></li>
+<% end %>
+</ul>
 </body>
 </html>

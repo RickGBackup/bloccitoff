@@ -7,5 +7,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
          #:confirmable  - stub confirmable out for ease of testing new users
          
+  has_many :items
   validates :name, length: { minimum: 1, maximum: 100 }, presence: true
 end
