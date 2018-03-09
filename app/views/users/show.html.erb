@@ -1,11 +1,11 @@
 <h1><%= @name %>'s Profile </h1>
 
-<%= @name %>'s Email: richkws@gmail.com
+<%= @name %>'s Email: <%= @user.email %>
 
-<h2> Add a To-Do Item</h2>
-<%= render 'items/form' %>
-
-
+<% if @user == current_user %>
+  <h2> Add a To-Do Item</h2>
+  <%= render 'items/form' %>
+<% end %>
 
 <h2>To Do:</h2>
 
