@@ -1,1 +1,5 @@
-<li><%= item.name %></li>
+<li id="js-item-<%= item.id %>"><%= item.name %>
+<% if item.user == current_user %>
+  <%= link_to "", [item.user, item], method: :delete, class: 'glyphicon glyphicon-ok', remote: true %>
+  </li>
+<% end %>

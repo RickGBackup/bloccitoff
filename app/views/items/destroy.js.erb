@@ -1,0 +1,3 @@
+<% if @item.destroyed? %>
+$('#js-item-<%= @item.id %>').hide();
+<% end %>
