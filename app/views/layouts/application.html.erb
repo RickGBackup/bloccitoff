@@ -10,15 +10,8 @@
   <div class="container">
     <%= render 'layouts/navbar' %>
     <%= render 'layouts/messages' %>
+    
     <%= yield %>
-<!--Display Parameters hash on each page-->
-    <br>
-    <em><h5>Params</h5>
-    <ul>
-      <% params.each do |key, val|%>
-        <li><%= key %>: <%= val %></li>
-      <% end %>
-    </ul></em>
   </div>
 </body>
 </html>
